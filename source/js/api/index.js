@@ -2,7 +2,7 @@ import 'es6-promise';
 import fetch from 'isomorphic-fetch'
 
 
-function testAsync() {
+const testAsync = () => {
 
   let URL = 'http://expenserapp.azurewebsites.net/api/User/4';
   let request = new Request(URL, {
@@ -13,7 +13,9 @@ function testAsync() {
       'Content-Type': 'application/json'
     })
   });
+
   return fetch(request);
+  
 }
 
 export default {
